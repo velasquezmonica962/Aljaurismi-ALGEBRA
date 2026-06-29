@@ -1,0 +1,140 @@
+body {
+    background: #0d1f27;
+    font-family: Arial;
+    color: #bde6ff;
+    text-align: center;
+}
+
+/* NAVEGACIÓN */
+.navegacion a {
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    padding: 10px;
+    background: #1b4a5a;
+    color: #bde6ff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.navegacion a:hover {
+    background: #2a6a85;
+}
+
+/* BANNER */
+.banner-doble {
+    background: linear-gradient(135deg, #0f2b3a, #1b1b1b);
+    padding: 50px 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    margin-bottom: 30px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.logo-aljuarismi img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    animation: orbitar 8s linear infinite;
+    filter: drop-shadow(0 0 15px #9dd6ff);
+}
+
+.logo-ecuacion svg {
+    width: 160px;
+}
+
+#ecuacion {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: escribir 8s ease forwards;
+}
+
+@keyframes orbitar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes escribir {
+    to { stroke-dashoffset: 0; }
+}
+
+/* EJERCICIOS */
+.ejercicio {
+    background: #0f2b3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 30px auto;
+    border: 1px solid #1b4a5a;
+}
+
+.ejercicio input {
+    width: 80px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.ejercicio button {
+    background: #9dd6ff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* QUIZ */
+.quiz {
+    background: #0f2b3a;
+    padding: 25px;
+    border-radius: 12px;
+    width: 450px;
+    margin: 40px auto;
+    border: 1px solid #1b4a5a;
+}
+
+.opcion {
+    background: #1b4a5a;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.opcion:hover {
+    background: #2a6a85;
+}
+
+/* ANIMACIONES GEOMÉTRICAS */
+.figura, .animTerreno {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 20px auto;
+}
+
+.cuadro.x2 {
+    width: 140px;
+    height: 140px;
+    background: #2a6a85;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    opacity: 0;
+}
+
+.rect.bx {
+    width: 140px;
+    height: 40px;
+    background: #1b4a5a;
+    position: absolute;
+    opacity: 0;
+}
+
+#rect1 { top: 10px; left: 50px; }
+#rect2 { top: 190px; left: 50px; }
+
+#rectB1 { top: 10px; left:
