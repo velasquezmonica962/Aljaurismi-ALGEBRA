@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recorrido Hipermedial - Al‑Juarismi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BANNER DOBLE SINCRONIZADO -->
+    <div class="banner-doble">
+        <div class="logos">
+            <div class="logo-aljuarismi">
+                <img src="logo-aljuarismi.png" alt="Logo Al‑Juarismi">
+            </div>
+
+            <div class="logo-ecuacion">
+                <svg viewBox="0 0 600 120">
+                    <path id="ecuacion"
+                          d="M20 60 
+                             Q40 20 60 60
+                             M70 60 L120 60
+                             M130 60 L180 60
+                             M190 60 L240 60"
+                          stroke="#bde6ff"
+                          stroke-width="6"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+
+        <h1>Al‑Juarismi y cómo nació el álgebra</h1>
+        <h2>Recorrido Hipermedial</h2>
+    </div>
+
+    <!-- PRESENTACIÓN -->
+    <section class="presentacion">
+        <p>Bienvenida al recorrido interactivo sobre Al‑Juarismi, el nacimiento del álgebra y sus métodos geométricos.</p>
+    </section>
+
+    <!-- NAVEGACIÓN -->
+    <div class="navegacion">
+        <a href="nodo1.html">Nodo 1: Vida de Al‑Juarismi</a>
+        <a href="nodo2.html">Nodo 2: Nacimiento del Álgebra</a>
+        <a href="nodo3.html">Nodo 3: Teorema de los Cuadrados</a>
+        <a href="nodo4.html">Nodo 4: Ejercicios Interactivos</a>
+        <a href="nodo5.html">Nodo 5: Quiz Final</a>
+    </div>
+
+</body>
+</html>
