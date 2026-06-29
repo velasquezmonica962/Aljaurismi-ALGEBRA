@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nodo 4 - Ejercicios Interactivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Nodo 4: Ejercicios Interactivos</h1>
+
+<!-- EJERCICIO 1 -->
+<div class="ejercicio">
+    <h3>Resolver ecuación cuadrática</h3>
+    <label>b:</label>
+    <input type="number" id="valorB">
+    <label>c:</label>
+    <input type="number" id="valorC">
+    <button onclick="resolver()">Resolver</button>
+    <p id="resultado"></p>
+</div>
+
+<!-- EJERCICIO 2 -->
+<div class="ejercicio">
+    <h3>Completar el cuadrado</h3>
+    <label>b:</label>
+    <input type="number" id="b2">
+    <label>c:</label>
+    <input type="number" id="c2">
+    <button onclick="cuadrado()">Calcular</button>
+    <p id="resultado2"></p>
+</div>
+
+<!-- EJERCICIO 3 -->
+<div class="ejercicio">
+    <h3>Problema verbal</h3>
+    <p>“Un número sumado con su cuadrado da 30.”</p>
+    <button onclick="mostrar()">Mostrar ecuación</button>
+    <p id="verbal"></p>
+</div>
+
+<div class="navegacion">
+    <a href="nodo3.html">Anterior</a>
+    <a href="nodo5.html">Siguiente</a>
+</div>
+
+<script>
+function resolver() {
+    let b = parseFloat(document.getElementById("valorB").value);
+    let c = parseFloat(document.getElementById("valorC").value);
+    let discriminante = b*b - 4*c;
+
+    if (discriminante < 0) {
+        document.getElementById("resultado").innerHTML =
+            "No tiene soluciones reales.";
+        return;
+    }
+
+    let x1 = (-b + Math.sqrt(discriminante)) / 2;
+    let x2 = (-b - Math.sqrt(discriminante)) / 2;
+
+    document.getElementById("resultado").innerHTML =
+        "x₁ = " + x1.toFixed(2) + "<br>x₂ = " + x2.toFixed(2);
+}
+
+function cuadrado() {
+    let b = parseFloat(document.getElementById("b2").value);
+    let c = parseFloat(document.getElementById("c2").value);
+
+    let mitad = b / 2;
+    let cuadrado = mitad * mitad;
+    let resultado = cuadrado - c;
+
+    document.getElementById("resultado2").innerHTML =
+        "Mitad de b: " + mitad +
+        "<br>Cuadrado de la mitad: " + cuadrado +
+        "<br>Resultado: " + resultado;
+}
+
+function mostrar() {
+    document.getElementById("verbal").innerHTML =
+        "La ecuación es: x² + x = 30";
+}
+</script>
+
+</body>
+</html>
