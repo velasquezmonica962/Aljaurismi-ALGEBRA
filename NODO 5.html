@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nodo 5 - Quiz Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Nodo 5: Quiz Final</h1>
+
+<div class="quiz">
+    <h3>Quiz interactivo: Al‑Juarismi</h3>
+    <div id="pregunta"></div>
+    <div id="opciones"></div>
+    <button id="siguiente" onclick="siguientePregunta()">Siguiente</button>
+    <p id="resultadoQuiz"></p>
+</div>
+
+<div class="navegacion">
+    <a href="nodo4.html">Anterior</a>
+    <a href="index.html">Inicio</a>
+</div>
+
+<script>
+const preguntas = [
+    {
+        pregunta: "¿Qué obra escribió Al‑Juarismi que dio origen al álgebra?",
+        opciones: ["Al‑Kitab al‑Jabr", "Los Elementos", "El Canon"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Qué significa 'al‑jabr'?",
+        opciones: ["Reducción", "Restauración", "Multiplicación"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué método usaba Al‑Juarismi?",
+        opciones: ["Completar cuadrados", "Derivadas", "Matrices"],
+        correcta: 0
+    }
+];
+
+let indice = 0;
+let puntaje = 0;
+
+function mostrarPregunta() {
+    document.getElementById("pregunta").innerHTML = preguntas[indice].pregunta;
+
+    let opcionesHTML = "";
+    preguntas[indice].opciones.forEach((opcion, i) => {
+        opcionesHTML += `<div class="opcion" onclick="verificar(${i})">${opcion}</div>`;
+    });
+
+    document.getElementById("opciones").innerHTML = opcionesHTML;
+}
+
+function verificar(opcionElegida) {
+    if (opcionElegida === preguntas[indice].correcta) {
+        puntaje++;
+    }
+    document.getElementById("siguiente").style.display = "block";
+}
+
+function siguientePregunta() {
+    indice++;
+    document.getElementById("siguiente").style.display = "none";
+
+    if (indice < preguntas.length) {
+        mostrarPregunta();
+    } else {
+        document.getElementById("pregunta").innerHTML = "";
+        document.getElementById("opciones").innerHTML = "";
+        document.getElementById("resultadoQuiz").innerHTML =
+            "Tu puntaje final es: " + puntaje + " / " + preguntas.length;
+    }
+}
+
+mostrarPregunta();
+</script>
+
+</body>
+</html>
